@@ -1,0 +1,140 @@
+/* src/styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  /* padding: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 100%;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+.home-container,
+.add-book-container {
+  flex: 1;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  /* padding: 1rem; */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-copyright {
+  font-size: .88235294117647rem;
+  color: #7a7a7a;
+  text-align: right;
+  width: 100%;
+  
+}
+h1,
+h2 {
+  color: rgb(73, 72, 150);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for screens with a maximum width of 768px (typical tablet size) */
+@media (max-width: 768px) {
+  main {
+    margin: 1rem auto;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
