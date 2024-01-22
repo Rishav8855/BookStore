@@ -4,32 +4,47 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-image: url('../public/images/img2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency here */
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  /* padding: 1rem; */
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
+
 nav {
   display: flex;
   flex-direction: row;
+  background-color: #333;
+  padding: 1rem;
 }
 
 nav a {
   margin-right: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
   display: flex;
   flex-direction: column;
   margin: 2rem auto;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -38,7 +53,7 @@ main {
 .sidebar {
   width: 100%;
   padding: 1rem;
-  background-color: #eee;
+  background-color: #f4f4f4;
 }
 
 .home-container,
@@ -48,13 +63,27 @@ main {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  /* padding: 1rem; */
+  background-color: #1a1a1a;
+  color: #ffffff;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 1rem;
+  opacity: 0.7; /* Adjust opacity to make the icons transparent */
 }
 
 .footer-copyright {
@@ -64,9 +93,8 @@ footer {
   width: 100%;
   
 }
-h1,
-h2 {
-  color: rgb(73, 72, 150);
+h1, h2 {
+  color: #bbcddf; /* Change to your preferred heading color */
 }
 
 ul {
@@ -85,8 +113,8 @@ li {
 }
 
 button {
-  background-color: #dc3545;
-  color: #fff;
+  background-color: #e74c3c; /* Red color */
+  color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -94,40 +122,57 @@ button {
 }
 
 button:hover {
-  background-color: #c82333;
+  background-color: #c0392b; /* Darker red on hover */
 }
 
 form {
   display: flex;
   flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 input {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 8px;
+  margin-bottom: 16px;
+  width: calc(100% - 16px); /* Adjust the width to your preference */
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 button[type='submit'] {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #3498db; /* Blue color */
+  color: #ffffff;
   cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
 }
-
 button[type='submit']:hover {
-  background-color: #0056b3;
+  background-color: #2980b9; /* Darker blue on hover */
 }
 
 /* Media query for screens with a maximum width of 768px (typical tablet size) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   main {
     margin: 1rem auto;
-  }
+  } */
+
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
 
   nav {
     flex-direction: column;
@@ -138,3 +183,54 @@ button[type='submit']:hover {
     margin-bottom: 0.5rem;
   }
 }
+
+.Home {
+  /* text-decoration: none; */
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.Add-book {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.book-table {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+}
+
+
+

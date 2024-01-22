@@ -3,14 +3,22 @@ import React from 'react';
 
 const BookList = ({ books, removeBook }) => {
   return (
-    <ul>
+    <div>
       {books.map((book) => (
-        <li key={book.id}>
-          <strong>{book.title}</strong> by {book.author}
-          <button onClick={() => removeBook(book.id)}>Remove</button>
-        </li>
+        <div key={book.id} className="table-row">
+          <div className="table-cell">{book.title}</div>
+          <div className="table-cell">{book.author}</div>
+          <div className="table-cell">{book.genre}</div>
+          <div className="table-cell">{book.description}</div>
+          <div className="table-cell">{book.language}</div>
+          <div className="table-cell">{book.publicationYear}</div>
+          <div className="table-cell">{book.personalRemarks}</div>
+          <div className="table-cell">
+            <button onClick={() => removeBook(book.id)}>Remove</button>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

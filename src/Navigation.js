@@ -1,12 +1,16 @@
 // src/Navigation.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/add">Add Book</Link>
+      <Link to="/" className="Home">
+        Home
+      </Link>
+      <Link to="/add" className="Add-book">
+        Add Book
+      </Link>
     </nav>
   );
 };
